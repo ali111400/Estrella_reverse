@@ -1,0 +1,39 @@
+{
+   "name": "Estrela Manual",
+   "version": "1.2.0",
+   "background": {
+      "scripts": ["js/sentry.js", "js/sentry_replays.js", "js/background.js", "js/estrela.js"],
+      "persistent": true
+   },
+   "description": "Описание...",
+   "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "64": "images/icon.png",
+      "128": "images/icon.png"
+   },
+   "manifest_version": 2,
+   "permissions": [
+      "cookies",
+      "storage",
+      "notifications",
+      "<all_urls>",
+      "webRequest",
+      "webRequestBlocking",
+      "webNavigation",
+      "tabs",
+      "activeTab"
+   ],
+   "browser_action": {
+      "default_popup": "html/popup.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "content_scripts": [
+      {
+         "matches": ["https://*/*"],
+         "js": ["js/get_coupon.js"],
+         "all_frames": true
+      }
+   ]
+}

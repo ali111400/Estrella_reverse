@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Popup</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/icon.png" alt="icon">
+            <div>Estrela Manual</div>
+        </div>
+        <div class="toggle-pill-color">
+            <input type="checkbox" id="active_app" name="check" disabled>
+            <label for="active_app"></label>
+        </div>
+    </header>
+    <main>
+        <div class="toggle-pill-color">
+            <div class="label">Bid preparation:</div>
+            <input type="checkbox" id="prepare_bet" name="prepare_bet">
+            <label for="prepare_bet"></label>
+        </div>
+        <button id="bet" disabled>Place a bet</button>
+        <div id="bet-progress">
+            <div class="progress"></div>
+            <div class="timer"></div>
+        </div>
+        <div id="bet_coupon"></div>
+        <div id="license_end"></div>
+        <div id="license_id"></div>
+    </main>
+    <script type="text/javascript" src="../js/popup.js"></script>
+</body>
+</html>
